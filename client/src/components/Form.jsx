@@ -40,12 +40,12 @@ const Form = ({ currentId, setCurrentId }) => {
   return (
     <Paper sx={{display: 'flex', alignItems: 'center', padding: 2, mt: 1}} elevation={3}>
         <form  onSubmit={handleSubmit} noValidate autoComplete='false'  style={{ width: '100%' ,display: 'flex', flexDirection: 'column', gap: '.5rem', alignItems: 'center', justifyContent: 'center', paddingX: '1.4rem' }}>
-            <Typography variant='h6'>Create A Memory</Typography>
+            <Typography variant='h6'>{!currentId? 'Create A Memory': 'Update Your Mem'}</Typography>
             <TextField variant='outlined'size='small' name='title' value={formData.title} label='title' fullWidth onChange={(e)=>setFormData({...formData, title: e.target.value})}  />
             <TextField variant='outlined' size='small' name='message' value={formData.message} multiline rows={3} label='message' fullWidth onChange={(e)=>setFormData({...formData,message: e.target.value})}  />
             <TextField variant='outlined' size='small' name='tags' value={formData.tags} label='tags' fullWidth onChange={(e)=>setFormData({...formData, tags: e.target.value.split(',')})}  />
             <Box sx={{ width: '100%'}}> <FileBase id='file' style={{ width: '100%'}} type='file' onDone={({ base64 })=> setFormData({...formData, selectFile: base64})} multiple={false} /> </Box>
-            <Button variant='contained' color='primary' fullWidth type='submit'>Create</Button>
+            <Button variant='contained' color='primary' fullWidth type='submit'>{!currentId? 'Create ': 'Update'}</Button>
             <Button variant='contained' color='secondary' size='small' fullWidth onClick={clear}>Clear</Button>
         </form>
     </Paper>

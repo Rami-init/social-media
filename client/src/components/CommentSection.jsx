@@ -15,9 +15,8 @@ const CommentSection = ({post}) => {
         const temp = dispatch(commentPost(post._id, newcomment))
         setComments(temp)
         setComment('')
-        console.log(commentRef.current)
+        console.log(commentRef.current.scrollHeight = 0)
     }
-    console.log(comments)
     const CommentWrapper = styled('div')(({theme})=>({
         diplay: 'flex',
         flexDirection: 'column',

@@ -6,6 +6,9 @@ const Footer = () => {
   const FooterWrapper = styled('div')(({theme})=>({
       backgroundColor: theme.palette.primary.main,
       color: theme.palette.text.disabled,
+      felxGrow: 1,
+      position: 'absolute',
+      botttom: 0,
       width: '100%',
       height: '2.5rem',
       display: 'flex',

@@ -9,7 +9,7 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 
-app.get('/', (req, res)=> res.send('hello'))
+app.get('/', (req, res)=> res.send('this is build success'))
 app.use('/api/posts', require('./routes/posts'))
 app.use('/api/users', require('./routes/users'))
 
