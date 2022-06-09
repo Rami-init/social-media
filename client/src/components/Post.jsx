@@ -62,7 +62,7 @@ const Post = ({ post, setCurrentId }) => {
       </Box>
         <CardContent>
           <Typography variant='body1' fontWeight='600' mb={1} color={theme.palette.text.secondary}>{post?.title}</Typography>
-          <Typography variant='body2' color={theme.palette.text.secondary}>{post?.message}</Typography>
+          <Typography variant='body2' color={theme.palette.text.secondary}>{(post?.message).slice(0, 53)}...</Typography>
         </CardContent>
         </ButtonBase>
         <CardActions sx={{display:'flex', justifyContent:'space-between', alignItems:'center', width: '100%'}}>

@@ -1,1 +1,0 @@
-export const GOOGLE_API = `933713161578-q0eopb40hrgofabf0v970dp3fva7jk8n.apps.googleusercontent.com`

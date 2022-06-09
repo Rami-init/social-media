@@ -8,7 +8,6 @@ import { useNavigate, useLocation } from 'react-router-dom'
 
 import { G_icon } from '../assets/g-icon'
 import { Input } from '../components'
-import { GOOGLE_API } from '../ver'
 import { signUp, signIn } from '../actions/auth'
 const Auth = () => {
   const initialState = {firstName: '', lastName: '', email: '', password: '', confirmPassword: ''}
@@ -69,7 +68,7 @@ const Auth = () => {
                     </Grid>
                     <Grid item xs={12}>
                         <GoogleLogin 
-                            clientId={GOOGLE_API}
+                            clientId={process.env.REACT_APP_GOOGLE_API}
                             render={(renderProps)=>(
                                 <Button variant='contained' startIcon={<G_icon />} fullWidth color='secondary'  onClick={renderProps.onClick} disabled={renderProps.disabled}>  &nbsp; Google Sign In</Button>
                             )}
