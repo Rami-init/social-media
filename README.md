@@ -54,14 +54,18 @@
 ### backend
 
 - `npm  start`
-  - Runs the app.
+```
+- Runs the app.
 - `npm run server`
-  - Runs the app in the development mode.
+```
+- Runs the app in the development mode.
 
 ### frontend
 
-- `npm  start`
+`npm  start`
 ```
   - Runs the app in the development mode.
-- `npm run build`
+
+`npm run build`
+```
   - Builds the app for production to the build folder.
